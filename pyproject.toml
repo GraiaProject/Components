@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "graia-component-selector"
-version = "0.0.1"
+version = "0.0.2"
 description = ""
 authors = ["GreyElaina <GreyElaina@outlook.com>"]
 license = "MIT"
@@ -10,7 +10,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-graia-application-mirai = "^0.0.5"
+graia-application-mirai = "*"
 
 [tool.poetry.dev-dependencies]
 
