@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "graia-component-selector"
-version = "0.0.3"
+version = "0.0.4"
 description = ""
 authors = ["GreyElaina <GreyElaina@outlook.com>"]
 license = "MIT"
