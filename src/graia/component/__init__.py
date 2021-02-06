@@ -1,13 +1,13 @@
 from typing import Callable, Generic, Sequence, TypeVar, Union
 from graia.application.message.elements.internal import InternalElement
 from graia.application.message import ExternalElement
-from graia.broadcast.entities.decorater import Decorater
-from graia.broadcast.interfaces.decorater import DecoraterInterface
+from graia.broadcast.entities.decorator import Decorator
+from graia.broadcast.interfaces.decorator import DecoratorInterface
 from graia.application.entry import MessageChain
 
 T = TypeVar("T")
 
-class Components(Decorater, Generic[T]):
+class Components(Decorator, Generic[T]):
     _filter: Callable[[Union[InternalElement, ExternalElement]], bool]
     _match_times: int = float("inf")
     _skip_times: int = 0
@@ -43,7 +43,7 @@ class Components(Decorater, Generic[T]):
 
         return cls(matcher, match_times)
 
-    async def target(self, interface: DecoraterInterface):
+    async def target(self, interface: DecoratorInterface):
         chain: MessageChain
         if interface.annotation != MessageChain:
             chain = await interface.dispatcher_interface.execute_with("message", MessageChain)
