@@ -1,6 +1,5 @@
 from typing import Callable, Generic, Sequence, TypeVar, Union
-from graia.application.message.elements.internal import InternalElement
-from graia.application.message import ExternalElement
+from graia.application.message.elements import InternalElement, ExternalElement
 from graia.broadcast.entities.decorator import Decorator
 from graia.broadcast.interfaces.decorator import DecoratorInterface
 from graia.application.entry import MessageChain
